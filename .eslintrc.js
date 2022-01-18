@@ -1,0 +1,41 @@
+module.exports = {
+  root: true,
+  extends: '@react-native-community',
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/no-shadow': ['error'],
+        'no-shadow': 'off',
+        'no-undef': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'react/prop-types': 'off',
+        'no-use-before-define': 'off',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['warn'],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
+        '@typescript-eslint/ban-types': 'off',
+        'react/jsx-filename-extension': [1, {extensions: ['.tsx']}],
+        'import/prefer-default-export': 'off',
+        'no-unused-expressions': 'off',
+        'prettier/prettier': 'error',
+        indent: ['error', 2, {SwitchCase: 1}],
+        'no-tabs': 0,
+        camelcase: 'off',
+        '@typescript-eslint/camelcase': ['warn'],
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'never',
+            tsx: 'never',
+          },
+          ,
+        ],
+      },
+    },
+  ],
+};
